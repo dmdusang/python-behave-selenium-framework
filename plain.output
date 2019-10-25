@@ -1,0 +1,143 @@
+Feature: Dashboard
+
+  Scenario Outline: Components -- @1.1 
+    Given I load the website ... passed in 0.708s
+    When I go to "Dashboard" page ... passed in 2.083s
+    Then I see this component "Status" ... failed in 0.056s
+Assertion Failed: Component Status not found on page
+
+  Scenario Outline: Components -- @1.2 
+    Given I load the website ... passed in 0.374s
+    When I go to "Dashboard" page ... passed in 1.075s
+    Then I see this component "Detector Settings" ... failed in 0.047s
+Assertion Failed: Component Detector Settings not found on page
+
+  Scenario Outline: Components -- @1.3 
+    Given I load the website ... passed in 0.332s
+    When I go to "Dashboard" page ... passed in 0.532s
+    Then I see this component "Battery" ... failed in 0.051s
+Assertion Failed: Component Battery not found on page
+
+  Scenario Outline: Components -- @1.4 
+    Given I load the website ... passed in 0.225s
+    When I go to "Dashboard" page ... passed in 0.328s
+    Then I see this component "GPS" ... failed in 0.050s
+Assertion Failed: Component GPS not found on page
+
+  Scenario Outline: Status -- @1.1 
+    Given I load the website ... passed in 0.259s
+    When I go to "Dashboard" page ... passed in 0.382s
+    Then Dashboard Status shows correct values for row "Status" ... passed in 0.000s
+
+  Scenario Outline: Status -- @1.2 
+    Given I load the website ... passed in 0.310s
+    When I go to "Dashboard" page ... passed in 0.348s
+    Then Dashboard Status shows correct values for row "White Reference Count" ... passed in 0.000s
+
+  Scenario Outline: Status -- @1.3 
+    Given I load the website ... passed in 0.223s
+    When I go to "Dashboard" page ... passed in 0.391s
+    Then Dashboard Status shows correct values for row "Collect Reference Count" ... passed in 0.000s
+
+  Scenario Outline: Status -- @1.4 
+    Given I load the website ... passed in 0.257s
+    When I go to "Dashboard" page ... passed in 0.334s
+    Then Dashboard Status shows correct values for row "Dark Reference Count" ... passed in 0.000s
+
+  Scenario Outline: Status -- @1.5 
+    Given I load the website ... passed in 0.224s
+    When I go to "Dashboard" page ... passed in 0.359s
+    Then Dashboard Status shows correct values for row "Last White Reference" ... passed in 0.000s
+
+  Scenario Outline: Status -- @1.6 
+    Given I load the website ... passed in 0.251s
+    When I go to "Dashboard" page ... passed in 0.360s
+    Then Dashboard Status shows correct values for row "Last Optimize" ... passed in 0.000s
+
+  Scenario Outline: Status -- @1.7 
+    Given I load the website ... passed in 0.240s
+    When I go to "Dashboard" page ... passed in 0.350s
+    Then Dashboard Status shows correct values for row "Last Dark Reference" ... passed in 0.000s
+
+  Scenario Outline: Status -- @1.8 
+    Given I load the website ... passed in 0.292s
+    When I go to "Dashboard" page ... passed in 0.428s
+    Then Dashboard Status shows correct values for row "Last Wavelength Check" ... passed in 0.000s
+
+  Scenario: Status Refresh
+    Given I load the website ... passed in 0.234s
+    When I go to "Dashboard" page ... passed in 0.355s
+    Then Clicking on Status Refresh should refresh status component ... passed in 0.000s
+
+  Scenario: Battery
+    Given I load the website ... passed in 0.248s
+    When I go to "Dashboard" page ... passed in 0.358s
+    Then Dashboard Battery shows Battery or AC Power with correct icon. ... passed in 0.000s
+
+  Scenario: Battery Refresh
+    Given I load the website ... passed in 0.241s
+    When I go to "Dashboard" page ... passed in 0.356s
+    Then Clicking on Battery Refresh should refresh battery component ... passed in 0.000s
+
+  Scenario Outline: Detector Settings -- @1.1 
+    Given I load the website ... passed in 0.227s
+    When I go to "Dashboard" page ... passed in 0.385s
+    Then Dashboard Detector Settings shows correct values for row "VNIR" ... failed in 0.003s
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/behave/model.py", line 1329, in run
+    match.run(runner.context)
+  File "/usr/local/lib/python3.7/site-packages/behave/matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "tests/steps/dashboard.py", line 27, in step_impl_detector_settings
+    dashboard.veify_detector_setting(row)
+AttributeError: 'Dashboard' object has no attribute 'veify_detector_setting'
+
+
+  Scenario Outline: Detector Settings -- @1.2 
+    Given I load the website ... passed in 0.262s
+    When I go to "Dashboard" page ... passed in 0.379s
+    Then Dashboard Detector Settings shows correct values for row "SWIR1" ... failed in 0.000s
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/behave/model.py", line 1329, in run
+    match.run(runner.context)
+  File "/usr/local/lib/python3.7/site-packages/behave/matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "tests/steps/dashboard.py", line 27, in step_impl_detector_settings
+    dashboard.veify_detector_setting(row)
+AttributeError: 'Dashboard' object has no attribute 'veify_detector_setting'
+
+
+  Scenario Outline: Detector Settings -- @1.3 
+    Given I load the website ... passed in 0.258s
+    When I go to "Dashboard" page ... passed in 0.351s
+    Then Dashboard Detector Settings shows correct values for row "SWIR2" ... failed in 0.000s
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/behave/model.py", line 1329, in run
+    match.run(runner.context)
+  File "/usr/local/lib/python3.7/site-packages/behave/matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "tests/steps/dashboard.py", line 27, in step_impl_detector_settings
+    dashboard.veify_detector_setting(row)
+AttributeError: 'Dashboard' object has no attribute 'veify_detector_setting'
+
+
+  Scenario Outline: GPS -- @1.1 
+    Given I load the website ... passed in 0.257s
+    When I go to "Dashboard" page ... passed in 0.363s
+    Then Dashboard GPS shows correct values for row "Fix" ... passed in 0.000s
+
+  Scenario Outline: GPS -- @1.2 
+    Given I load the website ... passed in 0.298s
+    When I go to "Dashboard" page ... passed in 0.372s
+    Then Dashboard GPS shows correct values for row "Location" ... passed in 0.000s
+
+  Scenario Outline: GPS -- @1.3 
+    Given I load the website ... passed in 0.219s
+    When I go to "Dashboard" page ... passed in 0.374s
+    Then Dashboard GPS shows correct values for row "Altitude" ... passed in 0.000s
+
+  Scenario Outline: GPS -- @1.4 
+    Given I load the website ... passed in 0.249s
+    When I go to "Dashboard" page ... passed in 0.356s
+    Then Dashboard GPS shows correct values for row "Format" ... passed in 0.000s
+
